@@ -638,6 +638,7 @@ a.cta {
 
 .carousel-wrapper {
     overflow-x: hidden;
+    overflow-y: hidden;
     width: 100%;
     height: 475px;
 }
@@ -1968,5 +1969,6 @@ a.cta {
     .footer-link {
         width: 35%;
     }
+
 
 }
