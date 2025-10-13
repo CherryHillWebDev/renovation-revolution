@@ -30,10 +30,10 @@ function handleScrolling() {
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-links .link, .nav-links .contact').forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
         const navMenu = document.getElementById('navMenu');
         const hamburger = document.querySelector('.hamburger');
-        
+
         navMenu.classList.remove('active');
         hamburger.classList.remove('active');
         isMenuOpen = false;
@@ -42,15 +42,18 @@ document.querySelectorAll('.nav-links .link, .nav-links .contact').forEach(link 
 });
 
 // Close mobile menu when clicking outside
+
 document.addEventListener('click', (e) => {
     const navMenu = document.getElementById('navMenu');
     const hamburger = document.querySelector('.hamburger');
     
-    if (!e.target.closest('.hamburger') && !e.target.closest('.mobile-nav')) {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
-
-        isMenuOpen = false;
-        handleScrolling();
+    if (e.target.closest('.hamburger') || e.target.closest('.nav-menu')) {
+      return
     }
+
+    navMenu.classList.remove('active');
+    hamburger.classList.remove('active');
+
+    isMenuOpen = false;
+    handleScrolling();
 });

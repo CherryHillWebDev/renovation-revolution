@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Gallery | Remodeling Revolution - South Jersey's No. 1 Remodeling Service</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="header-left">
+                <div class="header-contact-info">
+                    <span class="header-contact"><span class="header-icon img-wrapper"><img src="../img/phone-icon.svg" alt="phone icon"></span><a href="tel:215-971-4523">(215) 971-4523</a></span>
+                    <span class="header-contact"><span class="header-icon img-wrapper"><img src="../img/email-icon.svg" alt="email-icon"></span><a>remodelingrevolution@gmail.com</a></span>
+                </div>
+            </div>
+            <nav>
+                <div class="header-right">
+                    <div class="call-now-btn ghost-btn grey">
+                        CALL NOW
+                    </div>
+                        <div class="nav-menu" id="navMenu">
+                            <div class="nav-links">
+                                <a href="../index.html" class="link" >HOME</a>
+                                <a href="./about.html" class="link">ABOUT</a>
+                                <div class="dropdown">
+                                    <a class="service-nav">SERVICES</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="./additions.html">Additions</a></li>
+                                        <li><a href="./bathrooms.html">Bathrooms</a></li>
+                                        <li><a href="./basements.html">Basements</a></li>
+                                        <li><a href="./kitchens.html">Kitchens</a></li>
+                                        <li><a href="./offices.html">Office Spaces</a></li>
+                                        <li><a href="./paving.html">Paving</a></li>
+                                    </ul>
+                                </div>
+                                <a href="./gallery.html" class="link selected">GALLERY</a>
+                                <a href="../index.html#contact" class="contact cta">CONTACT</a>
+                            </div>
+                        </div> 
+                    <div class="hamburger-holder" onclick="toggleNav()">
+                        <p>MENU</p>
+                        <div class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="hero-gallery">
+        <h1>Our <span class="highlight">Portfolio</span></h1>
+        <p>Explore our completed projects showcasing expert craftsmanship and stunning transformations across South Jersey and Philadelphia</p>
+    </section>
+
+    <section class="filter-section">
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="kitchen">Kitchens</button>
+            <button class="filter-btn" data-filter="bathroom">Bathrooms</button>
+            <button class="filter-btn" data-filter="outdoor">Outdoor Spaces</button>
+            <button class="filter-btn" data-filter="basement">Offices</button>
+        </div>
+    </section>
+
+    <div class="gallery-container">
+        <div class="gallery-grid" id="galleryGrid">
+            <div class="gallery-item" data-category="bathroom" id="0">
+                <div class="gallery-image" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('../img/gallery/bathroom1/bathroom1-1.webp');"></div>
+                <div class="gallery-info">
+                    <h3>Contemporary Bathroom Renovation</h3>
+                    <p>Complete bath transformation featuring custom cabinetry, quartz countertops and walls, and modern lighting fixtures.</p>
+                    <span class="category-tag">Bathroom</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="outdoor" id="1">
+                <div class="gallery-image" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('../img/gallery/deck1/deck1-1.webp');"></div>
+                <div class="gallery-info">
+                    <h3>Deck Area</h3>
+                    <p>Beautiful outdoor living space with composite decking, 500 square feet of space, and modern black balusters.</p>
+                    <span class="category-tag">Deck</span>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="outdoor" id="2">
+                <div class="gallery-image" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url('../img/gallery/deck2/deck2-1.webp');"></div>
+                <div class="gallery-info">
+                    <h3>Multi-Level Deck</h3>
+                    <p>Charming hardwood outdoor stairway and multi-level deck space.</p>
+                    <span class="category-tag">Deck</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <h2>Ready to <span class='highlight'>Start Your Project?</span></h2>
+        <p>Let's transform your vision into reality. Contact us today for a free consultation.</p>
+        <a href="../index.html#contact" class="cta-button">Start Your Next Home Project</a>
+    </section>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <button class="modal-nav-btn modal-prev-btn" onclick="changeModalPicture(-1)"><span>&#8249;</span></button>
+            <img class="modal-image" id="modalImage" src="" alt="Gallery Image">
+            <button class="modal-nav-btn modal-next-btn" onclick="changeModalPicture(1)"><span>&#8250;</span></button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-holder">
+            <div class="footer-top-grid">
+                <div class="img-wrapper footer-logo">
+                    <img src="../img/logo.svg">
+                </div>
+                <div class="footer-info">
+                    <span class="footer-info-line">
+                        <div class="img-wrapper info-pic">
+                            <img src="../img/phone-icon.svg" alt="phone icon">
+                        </div>
+                        <p><a href="tel:215-971-4523">(215) 971-4523</a></p>
+                    </span>
+                    <span class="footer-info-line">
+                        <div class="img-wrapper info-pic">
+                            <img src="../img/email-icon.svg" alt="email icon">
+                        </div>
+                        <p><a>remodelingrevolution@gmail.com</a></p>
+                    </span>
+                </div>
+                <div class="footer-areas">
+                    <h4>Areas Served:</h4>
+                    <span class="footer-ul">
+                        <ul>
+                            <li>Atlantic County</li>
+                            <li>Burlington County</li>
+                            <li>Camden County</li>
+                            <li>Cumberland County</li>
+                            <li>Gloucester County</li>
+                            <li>Mercer County</li>
+                            <li>Salem County</li>
+                        </ul>
+                    </span>
+                </div>
+                <div class="footer-browse">
+                    <h4>BROWSE</h4>
+                    <ul class="footer-browse-list">
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                        <li><a href="../index.html#contact" class="footer-book">GET IN TOUCH</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-divider">
+                <div class="footer-site-info">
+                    <p>&#169; Remodeling Revolution <span class='copyright-year'>2025</span> | Website by <a href="https://cherryhillwebdev.com/index.html">Cherry Hill Web Dev</a></p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <script src="../js/gallery.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
