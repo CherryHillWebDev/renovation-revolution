@@ -1753,7 +1753,7 @@ body.no-scroll {
     .dropdown-menu {
         position: absolute;
         top: -100%;
-        left: -150px;
+        left: -75px;
         min-width: 160px;
         background: #444;
         display: none;
