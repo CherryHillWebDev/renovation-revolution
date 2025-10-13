@@ -1921,6 +1921,17 @@ body.no-scroll {
     .carousel-header::after {
         width: 345px;
     }
+
+    .gallery-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .cta-button {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
