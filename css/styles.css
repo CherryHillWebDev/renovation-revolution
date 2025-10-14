@@ -691,6 +691,11 @@ body.no-scroll {
     text-align: center;
 }
 
+.card-link a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .featured-project-holder {
     width: 80%;
     max-width: 1500px;
@@ -1375,7 +1380,6 @@ body.no-scroll {
 
 /*------- ABOUT PAGE --------*/
 .about-hero {
-    height: 500px;
     background-image:
         linear-gradient(90deg, #000000 0%, #5a5a5a23 70%, #5a5a5a00 100%),
         url('../img/about/about-page-img1.jpg');
@@ -1410,7 +1414,7 @@ body.no-scroll {
 }
 
 .about-hero a {
-    margin-top: 3em;
+    margin-top: 3rem;
     font-size: 1.5rem;
 }
 
@@ -1482,7 +1486,6 @@ body.no-scroll {
 
 .about-page-info-block {
     display: flex;
-    justify-self: first baseline;
     align-self: first baseline;
     gap: 1rem;
 }
@@ -1666,6 +1669,62 @@ body.no-scroll {
 .service-cta-section .cta-button {
     font-size: 1.1rem;
     padding: 1rem 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .about-page-title {
+        padding: 0 0 1rem;
+        width: 95%;
+        margin: 0 auto 1rem;
+    }
+
+    .about-hero a.cta {
+        align-self: center;
+        justify-self: center ;
+    }
+
+    .about-page-title::after {
+        width: 100%;
+    }
+
+    .about-title-text {
+        width: 100%;
+    }
+
+    .about-page-info {
+        width: 95%;
+        padding-bottom: 1rem;
+    }
+
+    .about-page-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .about-page-info-block {
+        display: grid;
+        grid-template-columns: 40px auto;
+        margin: auto;
+        gap: 0.5rem;
+    }
+
+    .about-grid-text {
+        margin-top: 0;
+    }
+
+    .info-icon {
+        align-self: center;
+        display: flex;
+    }
+
+    .about-cta {
+        width: 95%;
+        padding-bottom: 0;
+    }
 }
 
 @media screen and (max-width: 1050px) {
@@ -1922,15 +1981,19 @@ body.no-scroll {
         width: 345px;
     }
 
+    .about-hero {
+        padding: 1rem;
+        background-position: 40% 50%;
+    }
+
+    .about-hero h1 {
+        font-size: clamp(3rem, 4vw, 4rem);
+    }
+
     .gallery-grid {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-    }
-
-    .cta-button {
-        padding: 1rem 1.5rem;
-        font-size: 1rem;
     }
 }
 
@@ -2000,6 +2063,15 @@ body.no-scroll {
 
     .review-card p {
         margin: 0;
+    }
+
+    .cta-section {
+        padding: 1rem 1rem 2rem;
+    }
+
+    .cta-section a.cta-button {
+        padding: 1rem 2rem;
+        margin-bottom: 2rem;
     }
 }
 

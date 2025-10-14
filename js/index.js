@@ -80,7 +80,7 @@ function touchEnd() {
   isDragging = false;
 
   const movedBy = currentTranslate - prevTranslate;
-  const threshold = 100; // swipe threshold
+  const threshold = 50; // swipe threshold
   const maxIndex = getMaxIndex();
 
   if (movedBy < -threshold && currentIndex < maxIndex) currentIndex++;
