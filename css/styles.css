@@ -400,6 +400,17 @@ body.no-scroll {
     box-shadow: 5px 5px 15px #75757523;
 }
 
+.hero-title-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1500px;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
 .title-holder {
     position: absolute;
     top: 100px;
@@ -434,8 +445,8 @@ body.no-scroll {
 
 .title-middle h1 {
     font-family: var(--theme-font);
-    font-size: clamp(3.75rem, 5vw, var(--size5));
-    letter-spacing: -3px;
+    font-size: clamp(2.5rem, 2.0599rem + 1.4085vw, 3.75rem);
+    letter-spacing: -2px;
     line-height: 0.9;
 }
 
@@ -452,7 +463,7 @@ body.no-scroll {
 /*-------------------*/
 
 .key-info {
-    padding: 4rem 0;
+    padding: 2.5rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -476,35 +487,44 @@ body.no-scroll {
     box-shadow:  0 0 15px #ff730062;
 }
 
-.info-piece h3 {
+.info-piece p:first-child {
     font-family: var(--theme-font);
     font-size: clamp(var(--size3), 2.5vw, var(--size5));
+    font-weight: 700;
     letter-spacing: -1px;
 }
 
 .info-piece p {
-    font-size: clamp(1rem, 1.5vw, 1.8rem)
+    font-size: clamp(1.125rem, 0.993rem + 0.4225vw, 1.5rem);
 }
 
 .index-bg-holder { 
     position: absolute;
     width: 100vw;
-    height: 500px;
+    height: 500%;
     top: 0;
     left: 0;
-    background-image: url('../img/bg-img1.jpg');
+    background-image: url('../img/bg-img1.webp');
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -10;
-}   
+}
+
+.index-intro p {
+    color: #252525;
+}
 
 /*-------------------------*/
 
 .index-services-holder {
     background: linear-gradient(to top, #4a5568 0%, #2d3748 100%);
-    padding: 2rem 0;
+    padding: 1rem 0 2rem;
     position: relative;
     z-index: 5;
+}
+
+.index-services-holder > p {
+    margin: 1rem auto;
 }
 
 .carousel-container {
@@ -775,7 +795,8 @@ body.no-scroll {
 /*-------------------------*/
 
 .about-us-container {
-    height: 500px;
+    height: auto;
+    padding: 2rem;
     background-image: url('../img/idx-about-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -787,7 +808,7 @@ body.no-scroll {
 }
 
 .about-us-index-text {
-    width: 70%;
+    width: 90%;
     max-width: 900px;
     background-color:#1f29379a;
     backdrop-filter: blur(10px);
@@ -1579,6 +1600,8 @@ body.no-scroll {
     margin: 0 auto;
 }
 
+.service-container > p { text-align: center; margin-bottom: 1rem; margin-top: -1rem; }
+
 .service-overview h2 {
     font-size: clamp(1.75rem, 4vw, 2.5rem);
     margin-bottom: 2rem;
@@ -1805,8 +1828,9 @@ body.no-scroll {
     }
 
     .card {
-        flex: 0 0 280px;
-        width: 280px;    
+        flex: 0 0 100%;
+        min-width: 100%;
+        width: 100%;    
     }
 
     .dropdown-menu {
@@ -1902,17 +1926,27 @@ body.no-scroll {
         font-size: 10px;
         min-width: unset;
     }
+
     .hero-container {
         display: flex;
     }
+
+    .hero-img {
+        height: 600px;
+    }
+
+    .hero-title-container {
+        padding: 1rem;
+        left: 0;
+        top: 0;
+        transform: translate(0, 0);
+    }
+
     .title-holder {
-        top: unset;
-        right: unset;
+        right: 50%;
+        transform: translateX(50%);
         min-width: unset;
-        padding: 0.75rem;
-        margin: 0.75rem;
-        justify-self: center;
-        align-self: center;
+        width: 90%;
     }
 
     .title-top-row {
@@ -1940,7 +1974,7 @@ body.no-scroll {
     }
 
     .index-bg-holder {
-        height: 600px;
+        height: 500%;
     }
 
     .info-piece {
@@ -2003,9 +2037,7 @@ body.no-scroll {
         width: 20px;
     }
 
-    .featured-project-holder p {
-        font-size: 0.8rem;
-    }
+
     
     .about-us-index-text {
         padding: 1rem;
@@ -2013,11 +2045,7 @@ body.no-scroll {
     }
     
     .about-us-index-text h2 {
-        font-size: 1rem;
-    }
-
-    .about-us-index-text p {
-        font-size: 0.75rem;
+        font-size: 1.25rem;
     }
 
     .reviews-container {
